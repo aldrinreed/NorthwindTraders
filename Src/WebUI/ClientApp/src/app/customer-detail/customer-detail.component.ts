@@ -23,4 +23,8 @@ export class CustomerDetailComponent implements OnInit {
     this.bsModalRef.hide();
   }
 
+  public editButton() {
+    
+  }
+
 }

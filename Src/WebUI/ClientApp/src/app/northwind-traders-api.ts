@@ -1274,6 +1274,13 @@ export interface ICustomersListVm {
 export class CustomerLookupDto implements ICustomerLookupDto {
     id?: string | undefined;
     name?: string | undefined;
+    address?: string | undefined;
+    city?: string | undefined;
+    contactName?: string | undefined;
+    contactTitle?: string | undefined;
+    fax?: string | undefined;
+    phone?: string | undefined;
+    postalCode?: string | undefined;
 
     constructor(data?: ICustomerLookupDto) {
         if (data) {
@@ -1288,6 +1295,13 @@ export class CustomerLookupDto implements ICustomerLookupDto {
         if (data) {
             this.id = data["id"];
             this.name = data["name"];
+            this.address = data["address"];
+            this.city = data["city"];
+            this.contactName = data["contactName"];
+            this.contactTitle = data["contactTitle"];
+            this.fax = data["fax"];
+            this.phone = data["phone"];
+            this.postalCode = data["postalCode"];
         }
     }
 
@@ -1302,6 +1316,13 @@ export class CustomerLookupDto implements ICustomerLookupDto {
         data = typeof data === 'object' ? data : {};
         data["id"] = this.id;
         data["name"] = this.name;
+        data["address"] = this.address;
+        data["city"] = this.city;
+        data["contactName"] = this.contactName;
+        data["contactTitle"] = this.contactTitle;
+        data["fax"] = this.fax;
+        data["phone"] = this.phone;
+        data["postalCode"] = this.postalCode;
         return data; 
     }
 }
@@ -1309,6 +1330,13 @@ export class CustomerLookupDto implements ICustomerLookupDto {
 export interface ICustomerLookupDto {
     id?: string | undefined;
     name?: string | undefined;
+    address?: string | undefined;
+    city?: string | undefined;
+    contactName?: string | undefined;
+    contactTitle?: string | undefined;
+    fax?: string | undefined;
+    phone?: string | undefined;
+    postalCode?: string | undefined;
 }
 
 export class CustomerDetailVm implements ICustomerDetailVm {
